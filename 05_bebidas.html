@@ -7,11 +7,21 @@
     */
 
     //Entrada
+    let bebidas = ["Cerveja", "Vinho", "Suco Natural", "Tequila", "Água", "Refrigerante", "Vodka"];
 
-
+    let bebidasSalcool = [];
+    let bebidasAlcool = [];
     //Processamento
-
+    for (const item of bebidas) {
+        const pergunta = prompt(`Essa bebida "${item}", possui álcool? S-sim ou N-Não`).toLowerCase();
+        if(pergunta == 'n'){
+            bebidasSalcool.push(item);
+        }
+        else{
+            bebidasAlcool.push(item);
+        }
+    }
 
     //Saída
-
+    document.write(`Bebidas permitidas para menores de 18 anos: ${bebidasSalcool.join(", ")}`)
 </script>

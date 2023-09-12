@@ -7,11 +7,19 @@
     */
 
     //Entrada
+    let lista = ["A", "E", 2, 4.8, "CINQUENTA", "Araquari", 80, 10, 3.2];
 
-
+    let soma = 0;
     //Processamento
-
+    for (const item of lista) {
+        if(isNaN(item)){
+            soma=soma
+        }
+        else{
+            soma+=item
+        }
+    }
 
     //Saída
-
+    document.write(`Resultado: ${soma} `)
 </script>

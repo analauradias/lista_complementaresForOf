@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //Problema: Identificar Caracteres
     /*
@@ -6,11 +7,23 @@
     */
 
     //Entrada
+    const palavra = prompt(`Insira uma palavra.`).trim().toLowerCase();
 
+    let vogais = 0
+    let consoantes = 0;
 
     //Processamento
-
+    let letras = Array.from(palavra);
+    for (const item of letras) {
+        if (item == "a" || item == "e" || item == "i" || item == "o" || item == "u") {
+            vogais++;
+        }
+        else {
+            consoantes++;
+        }
+    }
+    
 
     //Saída
-
+    alert(`A quantidade de vogais é: ${vogais}. A quantidade de consoantes é: ${consoantes}`);
 </script>

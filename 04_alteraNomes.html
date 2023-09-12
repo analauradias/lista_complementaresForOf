@@ -8,11 +8,32 @@
     */
 
     //Entrada
+    let nomes = ["Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia"];
+    let nomesSemAcento = [];
 
 
     //Processamento
-
+    for (const item of nomes) {
+        if (item.includes('á')) {
+            nomesSemAcento.push(item.replace("á", "a"));
+        } 
+        else if (item.includes('é')) {
+            nomesSemAcento.push(item.replace("é", "e"));
+        }
+        else if (item.includes('í')) {
+            nomesSemAcento.push(item.replace("í", "i"));
+        }
+        else if (item.includes('ó')) {
+            nomesSemAcento.push(item.replace("ó", "o"));
+        }
+        else if (item.includes('ú')) {
+            nomesSemAcento.push(item.replace("ú", "u"));
+        }
+        else{
+            nomesSemAcento.push(item)
+        }
+    }
 
     //Saída
-
+    document.write(`Lista corrigida: ${nomesSemAcento}`);
 </script>
