@@ -8,11 +8,47 @@
     */
 
     //Entrada
+    let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
 
+    let rs = [];
+    let pr = [];
+    let sc = [];
 
     //Processamento
+    for (const item of cidades) {
+        const estado = prompt(`A cidade "${item}" pertence a qual estado? Responda com a sigla referente ao estado`).trim().toLowerCase();
 
+        if(estado == 'sc'){
+            sc.push(item)
+        }
+        else if(estado == 'pr'){
+            pr.push(item)
+        }
+        else{
+            rs.push(item)
+        }
 
+        
+    }
+
+    if(rs.length > pr.length && pr.length > sc.length){
+            document.write(`Cidades: <br> RS: ${rs.join(", ")} <br> Pr: ${pr.join(", ")} <br> Sc: ${sc.join(", ")}`)
+        }
+        else if(rs.length > sc.length && sc.length > pr.length){
+            document.write(`Cidades: <br> RS: ${rs.join(", ")} <br> SC: ${sc.join(", ")} <br> PR: ${pr.join(", ")}`)
+        }
+        else if(pr.length > rs.length && rs.length > sc.length){
+            document.write(`Cidades: <br> PR: ${pr.join(", ")} <br> RS: ${rs.join(", ")} <br> SC: ${sc.join(", ")}`)
+        }
+        else if(pr.length > sc.length && sc.length > rs.length){
+            document.write(`Cidades: <br> PR: ${rs.join(", ")} <br> SC: ${sc.join(", ")} <br> RS: ${rs.join(", ")}`)
+        }
+        else if(sc.length > pr.length && pr.length > rs.length){
+            document.write(`Cidades: <br> SC: ${sc.join(", ")} <br> PR: ${pr.join(", ")} <br> RS: ${rs.join(", ")}`)
+        }
+        else if(sc.length > rs.length && rs.length > pr.length){
+            document.write(`Cidades: <br> SC: ${sc.join(", ")} <br> RS: ${rs.join(", ")} <br> PR: ${pr.join(", ")}`)
+        }
     //Saída
 
 </script>

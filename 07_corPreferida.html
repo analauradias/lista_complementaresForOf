@@ -16,10 +16,10 @@
         const pergunta = prompt(`Você gosta da cor "${item}"? S-sim ou N-Não`);
 
         if(pergunta == 's'){
-            preferidas.push(pergunta);
+            preferidas.push(item);
         }
     }
 
     //Saída
-    alert
+    alert(`Cores que você gosta: ${preferidas.join(", ")}. Quantidade de cores: ${preferidas.length}`);
 </script>
